@@ -156,8 +156,8 @@ public class DefaultCellHandler implements XlsxCellHandler, XlsxRowResultHolder 
             }
 
             currentCellData.checkEmpty();
-            curRowContent.put(curCol, currentCellData);
         }
+        curRowContent.put(curCol, currentCellData);
     }
 
     @Override

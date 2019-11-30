@@ -206,8 +206,8 @@ public class ReadTest {
     public void readReturnList() {
         // 写法1：
         int headLineNum = 2;
-        InputStream inputStream = TestFileUtil.getResourcesFileInputStream("demo" + File.separator + "自定义时间.xlsx");
-        ExcelReader excelReader = EasyExcel.read(inputStream, new ExcelListener()).setDefaultReturnMap(Boolean.FALSE).build();
+        InputStream inputStream = TestFileUtil.getResourcesFileInputStream("demo" + File.separator + "demo1.xlsx");
+        ExcelReader excelReader = EasyExcel.read(inputStream, new ExcelListener()).setDefaultReturnMap(Boolean.TRUE).build();
         ReadSheet readSheet = EasyExcel.readSheet(0).headRowNumber(headLineNum -1).build();
         excelReader.read(readSheet);
         excelReader.finish();
